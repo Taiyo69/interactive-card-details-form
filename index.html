@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+  <main class="main">
+
+    <div class="card__container">
+
+      <div class="card card--back">
+
+        <div class="text">
+
+          <p class="card__text text__back" id="card__cvc">000</p>
+
+        </div>
+      
+      </div>        
+
+      <div class="card card--front">
+        
+        <div class="card__top">
+          
+          <img src="images/card-logo.svg" alt="card-logo" class="card__logo">
+
+        </div>
+
+        <div class="card__bottom">
+          
+          <div class="card__title">
+            
+            <p id="card_number" class="card__text text__front--title">0000 0000 0000 0000</p>
+
+          </div>
+
+          <div class="card__end">
+
+            <p id="card__name" class="card__text">Jane Appleseed</p>
+            <p id="card__exp" class="card__text">00/00</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="modal__container">
+
+      <div class="modal">
+        
+          <div class="modal__text">
+            
+            <img class="modal__check" src="images/icon-complete.svg" alt="complete.">
+            <p class="text__complete--title">THANK YOU!</p>
+            <p class="text__complete">We've added your card details</p>
+
+          </div>
+
+          <div class="form__group">
+            
+            <button class="button modal__button">Continue</button>
+
+          </div>
+
+        </div>
+
+    </div>
+
+    <div class="form__container">
+      
+      <form action="" class="form" id="form">
+        
+        <div class="form__group" id="form__name">
+          
+          <label for="name" class="form__group--input">Cardholder Name</label>
+          <input type="text" class="form__input" name="name" placeholder="e.g. Jane Appleseed" maxlength="20">
+          <p class="form__input--error" id="name">Wrong format, letters only</p>
+
+        </div>
+
+        <div class="form__group" id="form__number">
+          
+          <label for="number" class="form__group--input">Card Number</label>
+          <input type="text" class="form__input" id="inputNumber" name="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+          <p class="form__input--error" id="number">Wrong format, numbers only</p>
+
+        </div>
+
+        <div class="form__group form__group--exp" id="form__expdate">
+          
+          <label for="expdate" class="form__group--input">Exp. Date (MM/YY)</label>
+
+          <div class="form__input--group">
+            
+            <input type="text" class="form__input form__input--MM" name="month" placeholder="MM" maxlength="2">
+            <input type="text" class="form__input form__input--YY" name="year" placeholder="YY" maxlength="2">
+
+          </div>
+
+          <p class="form__input--error" id="mm" name="exp">Can't be blank</p>
+          <p class="form__input--error" id="yy" name="exp">Can't be blank</p>
+
+        </div>
+
+        <div class="form__group form__group--cvc" id="form__CVC">
+          
+          <label for="CVC" class="form__group--input">CVC</label>
+          <input type="text" class="form__input" name="CVC" placeholder="e.g. 123" maxlength="3">
+          <p class="form__input--error" id="cvc">Can't be blank</p>
+
+        </div>
+
+        <div class="form__group">
+          
+          <button class="button form__button">Confirm</button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Álvaro</a>.
+  </div>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
